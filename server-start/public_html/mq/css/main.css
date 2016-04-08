@@ -1,0 +1,106 @@
+
+@charset"utf-8";
+/* STEP 2: Reset or normalize */
+        @import url("css/normalize.css");
+		
+		/* STEP 3: Apply basic layout styles */
+		body {
+            background: #ccc;
+            font-size: 100%;
+            line-height: 1.5;
+		}
+		#container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 1em 5%;
+            background: #ddd;
+
+		}
+		header, section, footer {
+            background: #fff;
+            padding: 1em 5%;
+            margin-bottom: 1em;
+		}
+		h2 {
+            text-transform: uppercase;
+
+        }
+		/* STEP 4: Build media queries */
+        /*smart watch*/
+        @media(max-device-width: 50mm){
+            body{
+                font-size: 80%;
+                background: red;
+            }
+        }
+		
+		/* 320px and up
+		----------------------------------- */
+        @media only screen and (min-width: 320px){
+            h1 {
+                color: darkgoldenrod;
+            }
+        }
+
+		/* 480px and up
+		----------------------------------- */
+        @media only screen and (min-width: 425px) and (max-width: 424px){
+            h1{
+                color: orange;
+            }
+        }
+
+		/* 768px and up (tablet in portrait)
+		----------------------------------- */
+        @media only screen and (min-width: 768px){
+            h1{
+                color: red;
+                
+            }
+            section{
+                width: 35%;
+                float: left;
+                margin-left: 10%;
+            }
+            
+            section:first-child{
+                margin-left:0;
+            }
+            section:last-child{
+                width: 90%;
+                margin-left: 0;
+              
+            }
+            footer{
+                clear: both;
+            }
+        }
+
+		/* 1024px and up
+		----------------------------------- */
+        @media only screen and (min-width: 1024px){
+            h1{
+                color: magenta;
+                
+            }
+            section{
+                width: 20%;
+                margin-left: 5%;
+                
+            }
+            section:last-child{
+                width: 20%;
+                margin-left: 5%;
+            }
+            
+        }
+        /*4k tv*/
+        @media only screen and (min-width: 2560px){
+            body{
+                font-size: 150%;
+            }
+            h1{
+                color: darkolivegreen;
+                
+            }
+        }
